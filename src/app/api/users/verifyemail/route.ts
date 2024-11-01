@@ -1,3 +1,4 @@
+import { cookies } from 'next/headers'
 import {connect} from "@/dbConfig/dbConfig";
 import { NextRequest, NextResponse } from "next/server";
 import User from "@/models/userModel";
@@ -24,6 +25,8 @@ export async function POST(request: NextRequest){
         user.verifyToken = undefined;
         user.verifyTokenExpiry = undefined;
         await user.save();
+        cookies().set('token', 'value', { maxAge: 0 })
+          
         
         return NextResponse.json({
             message: "Email verified successfully",
