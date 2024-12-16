@@ -19,7 +19,6 @@ export default function SignupPage() {
     const [loading, setLoading] = React.useState(false);
 
     const onSignup = async () => {
-        const onSignup = async () => {
             try {
               setLoading(true);
               const response = await axios.post("/api/users/signup", user);
@@ -31,7 +30,7 @@ export default function SignupPage() {
         }finally {
             setLoading(false);
         }
-    }}
+    }
 
     useEffect(() => {
         if (
