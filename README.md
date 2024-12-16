@@ -1,11 +1,11 @@
-## live link: 
+## live link: https://next-auth-tho8less-projects.vercel.app/signup
 
 ## Tech Stack
 
 - Nextjs
 - typescript
 - mongodb
-- mailtrap
+- mailtrap/nodemailer
 
 
 ## Getting Started
